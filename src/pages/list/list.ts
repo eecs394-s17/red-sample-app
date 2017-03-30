@@ -19,11 +19,20 @@ export class ListPage {
 
     this.items = [];
     for(let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
+      if (i == 1) {
+        this.items.push({
+          title: 'Junwon' + i,
+          note: 'This is Junwons update',
+          icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+        });
+      }
+      else {
+        this.items.push({
+          title: 'Item ' + i,
+          note: 'This is item #' + i,
+          icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+        });
+      }
     }
   }
 
